@@ -10,6 +10,7 @@ import org.bukkit.entity.Entity;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.Location;
 import com.github.steviebeenz.importablegba.ImportableGBA;
+import io.papermc.lib.PaperLib;
 
 public class GetGroundDist {
     public static int getDistance(Player e){
@@ -22,5 +23,12 @@ public class GetGroundDist {
             distance++;
         }
         return distance;
+    }
+    public void goToGround(Player p) {
+        Location tp = p.getLocation();
+        
+        tp.setY(tp.getY()-getDistance(p) + 2);
+
+        PaperLib.teleportAsync(p, tp);
     }
 }
