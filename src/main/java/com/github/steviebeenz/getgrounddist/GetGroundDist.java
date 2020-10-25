@@ -1,4 +1,4 @@
-package com.github.steviebeenz.reacher;
+package com.github.steviebeenz.getgrounddist;
 
 import java.util.List;
 import java.util.ArrayList;
